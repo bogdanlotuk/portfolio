@@ -254,28 +254,43 @@
               Вийти зі мною на зв’язок можна, скориставшись контактною формою, або напряму за номером телефона, email, у
               соцмережах:
             </p>
-            <a class="contacts__phone" href="tel:30501111111">+38 (050) 111 11 11</a>
-            <a class="contacts__email" href="mailto:frontend-monster@email.com">frontend-monster@email.com</a>
+            <ul class="contacts__items">
+              <li class="contacts__item">
+                <a class="contacts__link" href="tel:30501111111">
+                  +38 (050) 111 11 11
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="mailto:frontend-monster@email.com">
+                  frontend-monster@email.com
+                </a>
+              </li>
+            </ul>
             <ul class="contacts__socials">
-              <li class="contacts__item">
-                <a class="contacts__link contacts__link--instagram" href="http://instagram.com"></a>
+              <li class="contacts__socials-item">
+                <a class="contacts__socials-link" href="http://instagram.com" style="background-image: url('images/instagram.svg');"></a>
               </li>
-              <li class="contacts__item">
-                <a class="contacts__link contacts__link--facebook" href="http://facebook.com"></a>
+              <li class="contacts__socials-item">
+                <a class="contacts__socials-link" href="http://facebook.com" style="background-image: url('images/facebook.svg');"></a>
               </li>
-              <li class="contacts__item">
-                <a class="contacts__link contacts__link--telegram" href="https://web.telegram.org/k/"></a>
+              <li class="contacts__socials-item">
+                <a class="contacts__socials-link" href="https://web.telegram.org/k/" style="background-image: url('images/telegram.svg');"></a>
               </li>
             </ul>
           </div>
           <form class="form" name="form">
-            <label class="form__label-name" for="name">Ваше ім’я</label>
-            <input class="form__input-name" name="name" id="name" type="text" placeholder="Іван" required>
-            <label class="form__label-phone" for="phone">Номер телефона</label>
-            <input class="form__input-phone" name="phone" id="phone" type="tel" placeholder="+380501111111" pattern="\++[0-9]{12}" required>
-            <label class="form__label-textarea" for="textarea">Ваше повідомлення</label>
-            <textarea class="form__textarea" name="textarea" id="textarea" placeholder="Текст вашого повідомлення" required></textarea>
-            <button class="form__btn btn" type="submit">Надіслати</button>
+            <div class="form__top">
+              <label class="form__label" for="name">Ваше ім’я
+                <input class="form__input" name="name" id="name" type="text" placeholder="Іван" required>
+              </label>
+              <label class="form__label" for="phone">Номер телефона
+                <input class="form__input" name="phone" id="phone" type="tel" placeholder="+380501111111" required>
+              </label>
+            </div>
+            <label class="form__label" for="textarea">Ваше повідомлення
+              <textarea class="form__input" name="textarea" id="textarea" placeholder="Текст вашого повідомлення" required></textarea>
+            </label>
+            <button class="btn" type="submit">Надіслати</button>
           </form>
         </div>
       </div>

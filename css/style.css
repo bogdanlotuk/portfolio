@@ -130,7 +130,6 @@ body {
 
 .logo {
   transition: opacity 0.5s ease-in-out;
-  display: inline-block;
 }
 
 .logo:hover {
@@ -554,13 +553,6 @@ body {
   font-size: 16px;
 }
 
-.contacts__socials {
-  display: flex;
-}
-
-.contacts__item:not(:last-child) {
-  margin-right: 20px;
-}
 
 .contacts__text {
   font-size: 16px;
@@ -568,24 +560,30 @@ body {
   margin-bottom: 32px;
 }
 
-.contacts__phone,
-.contacts__email {
+.contacts__items {
+  margin-bottom: 20px;
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.contacts__link {
   color: #2352DE;
   line-height: 130%;
-  outline: 2px solid transparent;
   border-bottom: 1px solid transparent;
   transition: all 0.3s;
 }
 
-.contacts__phone {
-  margin-bottom: 14px;
+.contacts__socials {
+  display: flex;
 }
 
-.contacts__email {
-  margin-bottom: 20px;
+.contacts__socials-item:not(:last-child) {
+  margin-right: 20px;
 }
 
-.contacts__link {
+.contacts__socials-link {
   display: block;
   width: 44px;
   height: 44px;
@@ -593,139 +591,89 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 4px;
-  outline: 2px solid transparent;
   transition: all 0.3s;
 }
 
-.contacts__link--instagram {
-  background-image: url("../images/instagram.svg")
-}
-.contacts__link--facebook {
-  background-image: url("../images/facebook.svg")
-}
-.contacts__link--telegram {
-  background-image: url("../images/telegram.svg")
-}
-
-.contacts__phone:hover,
-.contacts__email:hover {
+.contacts__link:hover {
   border-bottom: 1px solid #2352DE;
 }
 
-.contacts__link:hover {
+.contacts__socials-link:hover {
   opacity: 0.7;
 }
 
-.contacts__phone:focus,
-.contacts__email:focus,
-.contacts__link:focus {
+.contacts__link:focus,
+.contacts__socials-link:focus {
   border-radius: 4px;
   outline: 2px solid rgba(35, 82, 222, 0.5);
 }
 
-.contacts__phone:active,
-.contacts__email:active {
-  outline: 2px solid transparent;
+.contacts__link:active {
   opacity: 0.7;
 }
 
-.contacts__link:active {
-  outline: 2px solid transparent;
-  opacity: 2;
+.contacts__socials-link:active {
+  opacity: 1;
 }
 
 .form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
   max-width: 540px;
+}
+
+.form__top {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  display: grid;
-  grid-template-rows: repeat(5, auto);
-  column-gap: 30px;
+  margin-bottom: 30px;
 }
 
-.form label {
-  display: block;
-  grid-template-columns: 1fr 1fr;
+.form__top .form__label {
+  width: 48%;
 }
 
-.form__label-name {
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-}
-
-.form__input-name {
-  grid-row: 2 / 3;
-  grid-column: 1 / 2;
-}
-
-.form__label-phone {
-  grid-row: 1 / 2;
-  grid-column: 2 / 3;
-}
-
-.form__input-phone {
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
-}
-
-.form__label-textarea {
-  grid-row: 3 / 4;
-  grid-column: 1 / 3;
-}
-
-.form__textarea {
-  grid-row: 4 / 5;
-  grid-column: 1 / 3;
+.form__label {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  min-height: 115px;
-  resize: none;
-}
-
-.form__label-name,
-.form__label-phone,
-.form__label-textarea {
   font-weight: 600;
   font-size: 14px;
   line-height: 130%;
-  margin-bottom: 8px;
 }
 
-.form__input-name,
-.form__input-phone,
-.form__textarea {
+.form__input {
   background-color: #F6F6F8;
   border: none;
   padding: 15px;
-  margin-bottom: 30px;
   font-size: 14px;
   line-height: 130%;
   color:#000000;
-  outline: 3px solid transparent;
   transition: all 0.3s;
+  margin-top: 10px;
 }
 
-.form__input-name::placeholder,
-.form__input-phone::placeholder,
-.form__textarea::placeholder {
+textarea.form__input {
+  min-height: 115px;
+  resize: none;
+  margin-bottom: 31px;
+}
+
+.form__input::placeholder {
   font-size: 14px;
   line-height: 130%;
   color: #9C9CAB;
 }
 
-.form__input-name:focus,
-.form__input-phone:focus,
-.form__textarea:focus {
+.form__input:focus {
   outline: 3px solid rgba(35, 82, 222, 0.5);
-}
-
-.form__btn {
-  grid-row: 5 / 6;
-  grid-column: 1 / 3;
-  justify-self: flex-start;
 }
 
 .footer {
   background-color: #343740;
   padding: 50px 0;
-  text-align: center;
-  line-height: 0;
+  display: flex;
+  justify-content: center;
 }
