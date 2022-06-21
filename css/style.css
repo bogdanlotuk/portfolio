@@ -402,21 +402,25 @@ body {
 .clients__content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin: 0 50px;
 }
 
 .clients__item {
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .clients__photo {
-  display: inline-block;
   border-radius: 50%;
   margin-bottom: 12px;
+  max-width: 130px;
 }
 
 .clients__name {
+  display: block;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 24px;
@@ -431,57 +435,54 @@ body {
   line-height: 130%;
 }
 
-.clients__video {
-  position: relative;
-  max-width: 570px;
+a.clients__link {
   width: 100%;
+  max-width: 570px;
+  height: inherit;
+  min-height: 400px;
+  position: relative;
+  background-image: url("../images/clients-img.jpg");
+  transition: all 0.3s;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.clients__link {
+.clients__link::before {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.3);
-  transition: all 0.3s;
-  display: block;
+  content: "";
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  outline: 3px solid transparent;
+  background-color: #000000;
+  opacity: 0.3;
+  transition: all 0.3s;
 }
 
 .clients__play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s;
+  z-index: 20;
+  transition: transform 0.3s;
 }
 
-
-.clients__link:hover {
-  background-color: rgba(0, 0, 0, 0.6);
+.clients__link:hover::before{
+  opacity: 0.6;
 }
 
 .clients__link:hover .clients__play {
-  width: 129px;
-  height: 150px;
+  transform: scale(1.5);
 }
 
 .clients__link:focus {
   outline: 3px solid rgba(35, 82, 222, 0.5);
-} 
-
-.clients__link:active {
-  background-color: rgba(0, 0, 0, 0.45);
-  outline: 3px solid transparent;
 }
 
 .clients__link:active .clients__play {
-  width: 52px;
-  height: 60px;
+  transform: scale(0.6);
 }
 
-.testimonials {
-  text-align: center;
+.clients__link:active::before {
+  opacity: 0.45;
 }
 
 .testimonials__items {
@@ -494,9 +495,11 @@ body {
   display: flex;
   flex: 1;
   flex-direction: column;
+  align-items: center;
   max-width: 280px;
   padding: 140px 10px 50px;
   background-color: #f6f6f8;
+  border: 1px solid #DBDBED;
 }
 
 .testimonials__item::before {
@@ -547,25 +550,21 @@ body {
 
 .contacts__info {
   max-width: 540px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   font-size: 16px;
+  font-style: normal;
 }
 
-
 .contacts__text {
-  font-size: 16px;
   line-height: 160%;
-  margin-bottom: 32px;
+  margin-bottom: 27px;
 }
 
 .contacts__items {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .contacts__item:not(:last-child) {
-  margin-bottom: 14px;
+  margin-bottom: 7px;
 }
 
 .contacts__link {
@@ -613,7 +612,7 @@ body {
 }
 
 .contacts__socials-link:active {
-  opacity: 1;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15)
 }
 
 .form {
@@ -632,7 +631,7 @@ body {
 }
 
 .form__top .form__label {
-  width: 48%;
+  width: 47%;
 }
 
 .form__label {
@@ -647,24 +646,29 @@ body {
 .form__input {
   background-color: #F6F6F8;
   border: none;
-  padding: 15px;
+  padding: 14px 15px;
   font-size: 14px;
   line-height: 130%;
   color:#000000;
   transition: all 0.3s;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 textarea.form__input {
   min-height: 115px;
   resize: none;
   margin-bottom: 31px;
+  letter-spacing: -0.02em;
 }
 
 .form__input::placeholder {
   font-size: 14px;
   line-height: 130%;
   color: #9C9CAB;
+}
+
+.form__input:hover::placeholder {
+  color:#000000;
 }
 
 .form__input:focus {

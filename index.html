@@ -201,29 +201,27 @@
           Відгуки клієнтів
         </h2>
         <div class="clients__content">
-          <div class="clients__item">
+          <blockquote class="clients__item">
             <img class="clients__photo" src="images/clients-person.jpg" alt="Марк Цукерберг">
-            <h3 class="clients__name">
+            <cite class="clients__name">
               Марк Цукерберг
-            </h3>
+            </cite>
             <p class="clients__text">
-              Фантастично! Я цілком задоволений <br>
+              Фантастично! Я цілком задоволений
               роботою цього спеціаліста. Швидко і якісно. Рекомендую!
             </p>
-          </div>
-          <div class="clients__video">
-            <img class="clients__img" src="images/clients-img.jpg" alt="Відео з відгуком Марка">
-            <a class="clients__link" data-fancybox href="https://youtu.be/gElfIo6uw4g" data-type="iframe">
-              <svg class="clients__play" width="86" height="100" viewBox="0 0 86 100" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0L85.7143 50L0 100V0Z" fill="white">
-              </svg>
-            </a>
-          </div>
+          </blockquote>
+          <a class="clients__link" data-fancybox href="https://youtu.be/gElfIo6uw4g" data-type="iframe"
+            aria-label="Youtube video player">
+            <svg class="clients__play" width="86" height="100" viewBox="0 0 86 100" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0L85.7143 50L0 100V0Z" fill="white">
+            </svg>
+          </a>
         </div>
       </div>
     </section>
-    <div class="testimonials section">
+    <section class="testimonials section">
       <div class="container">
         <ul class="testimonials__items">
           <li class="testimonials__item testimonials__item--work">
@@ -244,12 +242,12 @@
           </li>
         </ul>
       </div>
-    </div>
+    </section>
     <section class="contacts section">
       <div class="container">
         <h2 class="title">Контакти</h2>
         <div class="contact__content">
-          <div class="contacts__info">
+          <address class="contacts__info">
             <p class="contacts__text">
               Вийти зі мною на зв’язок можна, скориставшись контактною формою, або напряму за номером телефона, email, у
               соцмережах:
@@ -268,29 +266,38 @@
             </ul>
             <ul class="contacts__socials">
               <li class="contacts__socials-item">
-                <a class="contacts__socials-link" href="http://instagram.com" style="background-image: url('images/instagram.svg');"></a>
+                <a class="contacts__socials-link" href="http://instagram.com" aria-label="instagram"
+                  style="background-image: url('images/instagram.svg');"></a>
               </li>
               <li class="contacts__socials-item">
-                <a class="contacts__socials-link" href="http://facebook.com" style="background-image: url('images/facebook.svg');"></a>
+                <a class="contacts__socials-link" href="http://facebook.com" aria-label="facebook"
+                  style="background-image: url('images/facebook.svg');"></a>
               </li>
               <li class="contacts__socials-item">
-                <a class="contacts__socials-link" href="https://web.telegram.org/k/" style="background-image: url('images/telegram.svg');"></a>
+                <a class="contacts__socials-link" href="https://web.telegram.org/k/" aria-label="telegram"
+                  style="background-image: url('images/telegram.svg');"></a>
               </li>
             </ul>
-          </div>
+          </address>
           <form class="form" name="form">
             <div class="form__top">
-              <label class="form__label" for="name">Ваше ім’я
+              <label class="form__label" for="name">
+                Ваше ім’я
                 <input class="form__input" name="name" id="name" type="text" placeholder="Іван" required>
               </label>
-              <label class="form__label" for="phone">Номер телефона
+              <label class="form__label" for="phone">
+                Номер телефона
                 <input class="form__input" name="phone" id="phone" type="tel" placeholder="+380501111111" required>
               </label>
             </div>
-            <label class="form__label" for="textarea">Ваше повідомлення
-              <textarea class="form__input" name="textarea" id="textarea" placeholder="Текст вашого повідомлення" required></textarea>
+            <label class="form__label" for="textarea">
+              Ваше повідомлення
+              <textarea class="form__input" name="textarea" id="textarea" placeholder="Текст вашого повідомлення"
+                required></textarea>
             </label>
-            <button class="btn" type="submit">Надіслати</button>
+            <button class="btn" type="submit">
+              Надіслати
+            </button>
           </form>
         </div>
       </div>
