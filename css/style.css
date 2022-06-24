@@ -379,12 +379,12 @@ body {
 .clients__content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 50px;
 }
 
 .clients__item {
   max-width: 400px;
-  padding-top: 40px;
 }
 
 .clients__photo {
@@ -412,19 +412,18 @@ body {
 }
 
 .clients__link {
+  position: relative;
   width: 100%;
   max-width: 570px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: inherit;
   min-height: 400px;
-  position: relative;
-  background-image: url("../images/clients-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .clients__link::before {
@@ -603,7 +602,7 @@ body {
   margin-top: 8px;
 }
 
-#textarea {
+.textarea {
   min-height: 115px;
   resize: none;
   margin-bottom: 30px;
