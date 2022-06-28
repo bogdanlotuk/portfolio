@@ -30,6 +30,9 @@
         <a class="logo" href="">
           <img class="logo__img" src="images/logo.svg" alt="Логотип">
         </a>
+        <button class="burger" type="button" area-label="Кнопка меню">
+          <span class="burger__line"></span>
+        </button>
         <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="#about">
@@ -72,7 +75,6 @@
         </h1>
         <a class="header__show" href="#">дивитися роботи</a>
       </div>
-      <div class="burger"></div>
     </div>
   </header>
 
@@ -294,20 +296,22 @@
           </address>
           <form class="form" name="form">
             <div class="form__top">
-              <label class="form__label" for="name">
+              <label class="form__label">
                 Ваше ім’я
-                <input class="form__input" name="name" id="name" type="text" placeholder="Іван" required>
+                <input class="form__input" name="name" type="text" placeholder="Іван" required>
               </label>
-              <label class="form__label" for="phone">
+              <label class="form__label">
                 Номер телефона
-                <input class="form__input" name="phone" id="phone" type="tel" placeholder="+380501111111" required>
+                <input class="form__input" name="phone" type="tel" placeholder="+380501111111" required>
               </label>
             </div>
-            <label class="form__label" for="textarea">
+
+            <label class="form__label form__label--textarea">
               Ваше повідомлення
-              <textarea class="form__input" name="textarea" id="textarea" placeholder="Текст вашого повідомлення"
-                required></textarea>
+              <textarea class="form__input form__input--textarea" name="textarea" placeholder="Текст вашого повідомлення">
+              </textarea>
             </label>
+
             <button class="btn" type="submit">
               Надіслати
             </button>
