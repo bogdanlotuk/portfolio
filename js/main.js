@@ -4,15 +4,34 @@ $(function () {
     $('.burger').toggleClass('burger--active');
     $('.menu__list').toggleClass('menu__list--active');
     $('.logo').toggleClass('logo--active');
-    $('.title').toggleClass('title--active');
+    $('body').toggleClass('body--lock');
   })
 
-  $('.menu__link').click(function() {
+  $('.menu__link, #navigation>.logo').click(function() {
     $('.burger--active').removeClass('burger--active');
     $('.menu__list--active').removeClass('menu__list--active');
     $('.logo--active').removeClass('logo--active');
-    $('.title--active').removeClass('title--active');
+    $('body').removeClass('body--lock');
   })
+  
+  $("#navigation, #footer").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+  });
+
+  var lastScroll = 0;
+  $(window).scroll(function(){
+  var nowScroll = $(this).scrollTop();
+  if (nowScroll > lastScroll){
+    $('#navigation').show(3000).addClass('navigation--fixed');
+    $('.burger').css('position', 'static');
+  } else {
+    $('#navigation').removeClass('navigation--fixed');
+  }
+  lastScroll = nowScroll;
+  });
 
   var mixer = mixitup('.portfolio__gallery');
 });

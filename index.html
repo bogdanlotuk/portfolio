@@ -22,10 +22,10 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header" style="background-image: url('images/header-bg.jpg')">
+  <header class="header" id="header" style="background-image: url('images/header-bg.jpg')">
     <div class="container">
-      <nav class="navigation">
-        <a class="logo" href="">
+      <nav class="navigation" id="navigation">
+        <a class="logo" href="#header">
           <img class="logo__img" src="images/logo.svg" alt="Логотип">
         </a>
         <button class="burger" type="button" area-label="Кнопка меню">
@@ -48,12 +48,12 @@
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#portpholio">
+            <a class="menu__link" href="#portfolio">
               Портфоліо
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#feedbacks">
+            <a class="menu__link" href="#clients">
               Відгуки
             </a>
           </li>
@@ -157,7 +157,7 @@
         </ul>
       </div>
     </section>
-    <section class="portfolio section">
+    <section class="portfolio section" id="portfolio">
       <div class="container">
         <h2 class="title">
           Мої роботи
@@ -201,7 +201,7 @@
         </button>
       </div>
     </section>
-    <section class="clients section">
+    <section class="clients section" id="clients">
       <div class="container">
         <h2 class="title">
           Відгуки клієнтів
@@ -249,7 +249,7 @@
         </ul>
       </div>
     </section>
-    <section class="contacts section">
+    <section class="contacts section" id="contacts">
       <div class="container">
         <h2 class="title">Контакти</h2>
         <div class="contact__content">
@@ -311,8 +311,8 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
-    <a class="logo" href="">
+  <footer class="footer" id="footer"> 
+    <a class="logo" href="#header">
       <img class="logo__img" src="images/logo.svg" alt="Логотип">
     </a>
   </footer>
