@@ -14,7 +14,7 @@ $(function () {
     $('body').removeClass('body--lock');
   })
   
-  $("#navigation, #footer").on("click","a", function (event) {
+  $("#header, #footer").on("click","a", function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'),
         top = $(id).offset().top;
@@ -27,10 +27,7 @@ $(function () {
   if (nowScroll > lastScroll){
     $('#navigation').show(3000).addClass('navigation--fixed');
     $('.burger').css('position', 'static');
-  } else {
-    $('#navigation').removeClass('navigation--fixed');
   }
-  lastScroll = nowScroll;
   });
 
   var mixer = mixitup('.portfolio__gallery');

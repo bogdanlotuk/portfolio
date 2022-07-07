@@ -186,10 +186,23 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #2352DE;
-  padding: 10px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
   z-index: 999;
 }
+
+.navigation--fixed::before {
+  position: fixed;
+  content: '';
+  top: 0;
+  left: 0;
+  background-color: #2352dedb;
+  height: 93px;
+  width: 100%;
+  z-index: -1;
+}
+
 
 .burger {
   display: none;
@@ -804,6 +817,14 @@ body {
     height: calc(100vh - 53px - 40px);
   }
 
+  .navigation--fixed {
+    padding: 10px 30px;
+  }
+
+  .navigation--fixed::before {
+    height: 73px;
+  }
+
   .burger {
     display: block;
     position: fixed;
@@ -966,6 +987,10 @@ body {
   .burger {
     top: 10px;
     right: 8px;
+  }
+
+  .navigation--fixed::before {
+    height: 64px;
   }
 
   .menu__list.menu__list--active {
